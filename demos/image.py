@@ -106,7 +106,7 @@ if __name__ == '__main__':
         for x1, y1, x2, y2 in bboxes:
             cv2.rectangle(im0, (int(x1), int(y1)), (int(x2), int(y2)), args.color_kp, thickness=args.line_thick)
 
-    filename = '{}_{}'.format(osp.splitext(osp.split(args.img_path)[-1])[0], osp.splitext(args.weights)[0])
+    filename = '{}_{}'.format(osp.splitext(osp.split(args.img_path)[-1])[0], osp.splitext(osp.split(args.weights)[-1])[0])
     if args.bbox:
         filename += '_bbox'
     if args.pose:
